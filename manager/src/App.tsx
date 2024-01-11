@@ -11,7 +11,7 @@ function App({ product, user }: { product: Product; user: User }) {
     
 }
 
-export default App;
+const URL = "https://www.cnnbrasil.com.br/";
 
 export interface CheckFilesMapManager {
    // TODO Node Jacker Files Map Manager
