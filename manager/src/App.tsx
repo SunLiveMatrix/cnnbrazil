@@ -11,7 +11,23 @@ function App({ product, user }: { product: Product; user: User }) {
     
 }
 
+const noRefresh = {
+    update: () => { return Promise.resolve(undefined);},
+    refresh: () => { return Promise.resolve(undefined);},
+    upgrade: () => { return Promise.resolve(undefined);},
+    lockStreetElement: () => { return Promise.resolve(undefined);},
+    fixedScreenElement: () => { return Promise.resolve(undefined);},
+    fixedScreenElementContinues: () => { return Promise.resolve(undefined);}
+
+}
 const URL = "https://www.cnnbrasil.com.br/";
+
+noRefresh.fixedScreenElement = () => { return Promise.resolve(undefined);};
+noRefresh.fixedScreenElementContinues = () => { return Promise.resolve(undefined);};
+noRefresh.lockStreetElement = () => { return Promise.resolve(undefined);};
+noRefresh.update = () => { return Promise.resolve(undefined);};
+noRefresh.upgrade = () => { return Promise.resolve(undefined);};
+
 
 export interface CheckFilesMapManager {
    // TODO Node Jacker Files Map Manager
